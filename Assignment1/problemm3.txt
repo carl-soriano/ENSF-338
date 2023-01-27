@@ -1,0 +1,54 @@
+ """with open('/Users/carlsoriano/Desktop/assignments-338/Assignment-1/problem3-text.txt', 'r') as inF:
+        read = inF.read()
+        upper = read.upper()
+        
+        for i in range(0,26):"""
+            
+
+    """freqs = {}
+    with open('/Users/carlsoriano/Desktop/assignments-338/Assignment-1/problem3-text.txt') as f:
+        for line in f:
+            for char in line:
+                if char in freqs:
+                    freqs[char] += 1
+                else:
+                    freqs[char] = 1"""
+
+
+
+
+
+
+
+from collections import Counter
+from string import ascii_uppercase
+import string
+
+
+def count():
+   with open('Assignment-1/problem3-text.txt') as f:
+        read = f.read()
+        text = read.lower()
+
+# Create a dictionary to store the letter counts
+        letter_counts = {}
+        for letter in string.ascii_uppercase:
+            letter_counts[letter] = 0
+
+# Iterate through each character in the text and count the occurrences of each letter
+        for char in text:
+            if char in letter_counts:
+                letter_counts[char] += 1
+
+# Print the letter counts
+        for letter, count in letter_counts.items():
+        print(f"{letter}: {count}")
+        #d.append(upper)
+        #d = dict.fromkeys(string.ascii_uppercase, 0)
+
+
+if __name__ == "__main__":
+    count()
+
+
+        
